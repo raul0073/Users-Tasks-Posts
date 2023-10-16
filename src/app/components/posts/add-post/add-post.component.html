@@ -1,0 +1,18 @@
+
+<div class="posts-container">
+    <div class="content">
+    <div class="left-side-art">
+        <img src="../../../assets/blog.png" alt="post art">
+    </div>
+    <div class="right-side-content">
+        <label for="title">Title:</label><br/>
+        <input type="text" [(ngModel)]="newPost.title" name="title" placeholder="Enter Post Title"><br/>
+        <label for="content">Post Content: </label><br/>
+        <input type="textarea" [(ngModel)]="newPost.body" rows="5" cols="2">
+        <div class="add-post-btn">
+            <button (click)="addPost()">&plus; Add Post </button>
+            <button  (click)="toggleAddPostView()">Cancel</button>
+        </div>
+    </div>
+    </div>
+</div>

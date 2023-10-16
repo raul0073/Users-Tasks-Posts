@@ -1,0 +1,32 @@
+.feedback-container{
+    position: absolute;
+    width: 600px;
+    left: 25%;
+    top: 3%;
+    background-color: #d3d3d3;
+    border: 0.3px solid #888888c7;
+    border-radius: .8rem;
+    z-index: 1;
+    
+    .feedback-msg{
+        font-weight: 200;
+        font-size: 1.2;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    animation: popIn 5s ease-in-out forwards;
+    @keyframes popIn {
+        0%{
+            transform: translateY(-200px);
+        }
+        50%{
+            transform: translateY(0);
+            height: fit-content;
+        }
+        100%{
+            transform: translateY(-200px);
+            height: clamp(100px, fit-content, fit-content);
+        }
+    }
+}

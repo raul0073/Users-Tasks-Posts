@@ -1,0 +1,5 @@
+<div class="feedback-container" *ngIf="feedbackService.isPopUp">
+    <div class="feedback-msg">
+        <h2 [style.color]="feedbackService.alertColor">{{feedbackService.alertMsg}}</h2>
+    </div>
+</div>

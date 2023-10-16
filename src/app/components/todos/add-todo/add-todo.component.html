@@ -1,0 +1,19 @@
+
+<div class="todos-container">
+    
+    <div class="content">
+
+    <div class="left-side-art">
+        <img src="../../../assets/task.png" alt="task art">
+    </div>
+
+    <div class="right-side-content">
+        <label for="title">Title:</label><br/>
+        <input type="text" [(ngModel)]="newTask.title" name="title" placeholder="Enter Task Title">
+        <div class="add-task-btn">
+            <button (click)="addTask()">&plus; Add Task </button>
+            <button (click)="toggleAddTodo()">Cancel</button>
+        </div>
+    </div>
+    </div>
+</div>

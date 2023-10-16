@@ -1,0 +1,37 @@
+<div class="card">
+    
+    <div class="header">
+        <h2 style="text-transform:capitalize"> {{userData?.name}}'s todos</h2>
+    </div>
+    <br/>
+
+    <app-add-todo *ngIf="isAddTodoPage === true"/>
+
+<div class="todos-container" *ngIf="!isAddTodoPage && userData?.tasks" >
+    <h3 *ngIf="userData?.tasks">No Tasks for this user</h3>
+    <div class="content"*ngFor="let task of userData?.tasks?.slice(0,maxTodosToRender)" >
+
+    <div class="left-side-art">
+        <img src="../../../assets/task.png" alt="task art">
+    </div>
+
+    <div class="right-side-content">
+        <h1 *ngIf="userData?.tasks?.length === 0">No todos for this user</h1>
+
+        <label for="title">Title:</label>
+        <h3 >{{task.title}}</h3>
+        
+        <label for="completed">Completed:</label>
+        
+        <h3 style="text-transform:capitalize;" [ngStyle]="{'color': task.completed === false? 'red' : 'green'}">{{task.completed}}</h3>
+        <p >{{task._id}}</p>
+        <button *ngIf="task.completed === false" (click)="markCompleted(task)">Mark Completed</button><br/>
+
+    </div>
+</div>
+<a class="showMore" (click)="showMoreItems()" [text]="maxTodosToRender === 100 ? 'Show Less' : 'Show More'"></a>
+    <div class="add-task-btn">
+        <button (click)="toggleAddTodoView()" >&plus; Add Task </button>
+    </div>
+</div>
+</div>

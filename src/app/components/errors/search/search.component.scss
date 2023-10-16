@@ -1,0 +1,19 @@
+.error-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    h2{
+        font-size: 3rem;
+        font-weight: 600;
+        width: 100%;
+        
+        span{
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+$appYellow: #FBAE3C;
+// $bgYellow: 
+$appPurple: #3a1772c8;
+$appSkyblue: #5398BE;
+$appBlack: #242424;
+
+
+.todos-container{
+    margin-top: 1rem;
+    width: 90%;
+    display: flex;
+    flex-direction:column;
+    overflow: none;
+    background-color: white;
+    // border-radius: .3rem;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: .5rem;
+
+    h3{
+        color: $appYellow;
+        font-weight: 600;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .showMore{
+        cursor: pointer;
+        &::after{
+            content: "...";
+            
+        }
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        width: 100%;
+        margin: .5rem auto;
+        border: 1px solid $appYellow;
+        padding: .5rem;
+        border-radius: .5rem;
+
+
+        button{
+            margin: .5rem;
+            float: right;
+        }
+        .left-side-art{
+
+            img{
+                padding: .2rem;
+                width: clamp(70px, 80px, 50px);
+                height:  clamp(70px, 80px, 50px);
+                margin: .2rem;
+            }
+
+        }
+        .right-side-content{
+            margin: .2rem;
+
+            label{
+                opacity: .7;
+            }
+        }
+    }
+
+    .add-task-btn{
+        float: right;
+        margin-left: 65%;
+
+        button{
+            background-color: transparent;
+            color:$appSkyblue;
+        }
+    }
+
+}

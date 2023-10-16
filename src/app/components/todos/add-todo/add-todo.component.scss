@@ -1,0 +1,66 @@
+$appYellow: #fbae3c;
+// $bgYellow:
+$appPurple: #3a1772c8;
+$appSkyblue: #5398be;
+$appBlack: #242424;
+
+.todos-container {
+  margin-top: 1rem;
+  width: initial;
+  display: flex;
+  flex-direction: column;
+  overflow: none;
+  background-color: white;
+  // border-radius: .3rem;
+  backdrop-filter: blur(10px);
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 0.5rem;
+
+  .content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    margin: 0.5rem auto;
+    border: 1px solid $appYellow;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    input {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $appYellow;
+      font-weight: 600;
+      text-transform: capitalize;
+      width: 90%;
+    }
+
+    button {
+      margin: 0.5rem;
+      float: right;
+    }
+
+    .left-side-art {
+      img {
+        padding: 0.2rem;
+        width: clamp(70px, 80px, 50px);
+        height: clamp(70px, 80px, 50px);
+        margin: 0.2rem;
+      }
+    }
+
+    .right-side-content {
+      margin: 0.2rem;
+
+      label {
+        opacity: 0.7;
+      }
+    }
+
+    .add-task-btn {
+      width: 100%;
+      display: flex-end;
+      align-items: center;
+    }
+  }
+}

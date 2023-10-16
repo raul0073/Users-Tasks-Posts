@@ -1,0 +1,193 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "calibri";
+}
+
+$appPink: #d741a7;
+$appPurple: #3a1772;
+$appSkyblue: #5398be;
+$appBlack: #242424;
+$appBurgundy: #a21d56;
+$appYellow: #fbae3c;
+
+// set page bg
+html,
+body {
+  background-image: url("./assets/blurry-gradient-haikei.png");
+  background-size: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// global styling
+// inputs and label for all page
+
+// inputs and labels
+label {
+  width: fit-content;
+  padding: -3rem;
+  font-size: 0.8rem;
+}
+
+input {
+  width: fit-content;
+  padding-left: 0.3rem;
+  padding: 0.3rem;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  border: 0.3px solid $appYellow;
+
+  &:focus {
+    border: 0.3px solid $appPurple;
+  }
+}
+
+// default btn
+button {
+  background-color: $appYellow;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  color: $appBlack;
+
+  &:hover {
+    background-color: $appSkyblue;
+  }
+}
+
+// card container
+.card {
+  background-color: rgb(255, 255, 255);
+  border: 0.3px solid grey;
+  width: 100%;
+  animation: popin 2s ease forwards;
+  margin: 0.5rem 0;
+
+  &.user{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  @keyframes popin {
+    from {
+      transform: translateY(-500px);
+      opacity: 0.2;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .header {
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+    background-color: $appSkyblue;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 80px;
+      height: 80px;
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+  }
+  .img-container{
+    padding: 1rem;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 100%;
+        height: 100%;
+        // mix-blend-mode: multiply;
+    }
+}
+
+&.completed {
+    // border: 4px solid green;
+    box-shadow: 0px 0px 3px green;
+  }
+
+.main-content{
+    display: block;
+}
+    .user-details{
+        display: flex;
+        flex-direction: column;      
+        width: initial;
+}
+}
+.btns-container{
+    position: relative;
+    width: 90%;
+    display: flex;
+    margin: .3rem;
+
+    button{
+        
+        &:first-child{
+        margin-right: 30%;
+        padding: .2rem;
+        width: fit-content;
+        background-color: rgb(172, 172, 172);
+
+        &:hover{
+            background-color: darkcyan;
+        }
+        }
+
+    }
+
+}
+.secondary-content{
+    border: 1px solid rgb(70, 70, 70);
+    background-color: rgba(170, 170, 170, 0.267);
+    height: fit-content;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    transition: .2s ease;
+    
+    label{
+        width: fit-content;
+        padding: .3rem;
+    }
+
+    &.show{
+        display: block;
+    }
+
+    &:hover{
+        background-color: rgba(170, 170, 170, 0.153);
+        
+        // &::after{
+        //     content: "Close";
+        //     text-align: right;
+        // }
+    }
+}
+

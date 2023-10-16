@@ -1,0 +1,14 @@
+.todos-container,
+.posts-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    overflow: none;
+    background-color: white;
+    // border-radius: .3rem;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+}

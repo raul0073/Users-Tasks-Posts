@@ -1,0 +1,71 @@
+$appYellow: #FBAE3C;
+// $bgYellow: 
+$appPurple: #3a1772c8;
+$appSkyblue: #5398BE;
+$appBlack: #242424;
+
+
+.posts-container{
+    margin-top: 1rem;
+    width: initial;
+    display: flex;
+    flex-direction:column;
+    overflow: none;
+    background-color: white;
+    // border-radius: .3rem;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: .5rem;
+
+
+    .content{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        width: 100%;
+        margin: .5rem auto;
+        border: 1px solid $appYellow;
+        padding: .5rem;
+        border-radius: .5rem;
+
+        input{
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $appYellow;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        button{
+            margin: .5rem;
+            float: right;
+        }
+        .left-side-art{
+
+            img{
+                padding: .2rem;
+                width: clamp(70px, 80px, 50px);
+                height:  clamp(70px, 80px, 50px);
+                margin: .2rem;
+            }
+
+        }
+        .right-side-content{
+            margin: .2rem;
+
+            label{
+                opacity: .7;
+            }
+
+        }
+
+        .post-task-btn{
+            width: 100%;
+            display: flex-end;
+            align-items: center;
+            
+        }
+    }
+
+
+
+}

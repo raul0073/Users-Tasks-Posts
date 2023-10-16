@@ -1,0 +1,34 @@
+<div class="userBox-container" [class.completed]="allTasksCompleted" [ngStyle]="{'background': isSelected  ? '#ecc362' : 'white'}">
+    <!--  -->
+    <div class="img-container">
+        <img src="../../../assets/manIcon.png" alt="userAvater">
+    </div>
+    <div class="main-content" >
+        <div class="user-details" [routerLink]="['/user/', userData?._id]" >
+            <label for="id" (click)="selectUser(userID.value)" >ID: </label>
+            <input type="text" name="id" #userID [value]="userData?._id" disabled >
+            <label for="name">Name: </label>
+            <input type="text" name="name" [(ngModel)]="updatedUser.name" [value]="userData?.name">
+            <label for="email">Email: </label>
+            <input type="email" name="email" [(ngModel)]="updatedUser.email" [value]="userData?.email">
+        </div>
+
+        <div class="btns-container">
+            <button (mouseover)="showMore = true">Other Data..</button>
+            <button (click)="upUser(userID.value,updatedUser)">Update</button>
+            <button (click)="confirmDelete(userData?._id)">Delete</button>
+        </div>
+        
+        <!-- other data -->
+        <div class="secondary-content" *ngIf="showMore">
+            <label for="street">Street: </label>
+            <input type="text" name="street" [(ngModel)]="updatedUser.street" [value]="userData?.street">
+            <label for="city">City: </label>
+            <input type="text" name="city" [(ngModel)]="updatedUser.city" [value]="userData?.city">
+            <label for="zipcode">Zipcode: </label>
+            <input type="text" name="zipcode" [(ngModel)]="updatedUser.zipcode" [value]="userData?.zipcode">  
+            <a href="#" class="btn" (click)="showMore = !showMore" >Close</a>  
+        </div>
+    </div>
+    <!-- btns -->
+</div>

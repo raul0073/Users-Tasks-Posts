@@ -1,0 +1,70 @@
+
+//colors
+$appYellow: #d7aa41;
+$appPurple: #3A1772;
+$appSkyblue: #5398BE;
+$appBlack: #242424;
+
+// inputs and label for all page
+label{
+    width: fit-content;
+    padding: .3rem;
+    font-size: .8rem;
+}
+input{
+    padding: .5rem;
+    width: fit-content;
+    padding-left: .3rem;
+    padding: .3rem;
+    margin: .3rem;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    border: .3px solid $appYellow;
+
+    &:focus{
+        border: .3px solid $appPurple;
+    }
+}
+
+
+.form-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 90%;
+    margin: .5rem;
+    padding: .2rem;
+    overflow: none;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    padding: 1rem;
+    
+
+    .art-container{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        
+        img{
+            width: inherit;
+        }
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-container{
+        position: relative;
+        width: 100%;
+        
+        // justify-content: end;
+        margin: .3rem;
+
+        button{
+            float: right;
+        }
+    }
+}

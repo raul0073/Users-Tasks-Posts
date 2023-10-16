@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="header">
+        Add New User
+    </div>
+    <div class="form-container">
+        <div class="art-container">
+            <img src="../../../assets/add-friend.png" alt="add user art">
+           </div>
+        <form #addUserForm="ngForm"  >
+            <label for="name">Name:</label>
+            <input type="text" name="name" [(ngModel)]="newUser.name" required />
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" [(ngModel)]="newUser.email" required />
+
+            <div class="btn-container">
+                <button type="submit" (click)="addUser()">Add user</button>
+            </div>
+        </form>
+    </div>
+</div>
